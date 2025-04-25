@@ -1,5 +1,7 @@
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
+import AuthContextProvider from "@/context/AuthContext";
 
 
 // burası approuter gibi rotaları yönetiyor
@@ -12,8 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body >
-        
+        <AuthContextProvider>
           {children}
+
+         <ToastContainer/> 
+        </AuthContextProvider>
          
       </body>
     </html>
