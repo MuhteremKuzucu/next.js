@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import AuthContextProvider from "@/context/AuthContext";
+import Navbar from "@/components/Navbar";
 
 
 // burası approuter gibi rotaları yönetiyor
@@ -15,6 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <AuthContextProvider>
+
+        <Navbar/>
           {children}
 
          <ToastContainer/> 
